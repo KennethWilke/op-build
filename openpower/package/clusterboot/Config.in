@@ -1,0 +1,7 @@
+config BR2_PACKAGE_CLUSTERBOOT
+        bool "clusterboot"
+        select BR2_PACKAGE_WGET
+        select BR2_PACKAGE_KEXEC_LITE if !BR2_PACKAGE_KEXEC
+        select BR2_PACKAGE_BASH
+        help
+          Clusterboot is kexec-based bootloader for large scale deployments
